@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.casher.MainActivity">
+    tools:context="com.example.casher.ui.MainActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator_layout"
@@ -39,8 +39,8 @@
         android:layout_height="wrap_content"
         app:itemBackground="@color/light_background_primary"
         app:itemIconTint="@color/selector_light_bottom_nav_item"
-        app:itemTextColor="@color/selector_light_bottom_nav_item"
         app:itemRippleColor="@color/light_background_primary_l"
+        app:itemTextColor="@color/selector_light_bottom_nav_item"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -34,6 +34,11 @@ android {
         jvmTarget = '1.8'
     }
 
+    //turn on data binding fot our project
+    dataBinding {
+        enabled = true
+    }
+
     defaultConfig {
         applicationId "com.example.casher"
         minSdkVersion 23
