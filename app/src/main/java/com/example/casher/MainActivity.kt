@@ -7,6 +7,8 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 /** TODO [2019.12.08] свяжи bottom navigation with android navigation component */
@@ -34,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         toolbar?.let { setupActionBarWithNavController(navController, appBarConfiguration) }
 
+        bottom_nav_view?.setupWithNavController(navController) // bind bottom nav with navigation
     }
 
     override fun onSupportNavigateUp(): Boolean =

@@ -8,7 +8,7 @@
     <fragment
             android:id="@+id/main_dest"
             android:name="com.example.casher.fragments.MainFragment"
-            android:label="@string/app_name"
+            android:label="@string/TITLE_APP_WORD"
             tools:layout="@layout/fragment_main">
     </fragment>
 </navigation>

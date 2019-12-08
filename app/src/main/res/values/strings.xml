@@ -1,6 +1,38 @@
-<resources>
-    <string name="app_name">Casher</string>
+<!--
+Файл содержит набор строковых констант, константы формируются по префиксам и записываются в
+верхнем регистре, с использованием snake_case. Каждая константа оканчивается словом WORD.
+Допускается повторение слов в различных категориях. Подобная избыточность позволит более гибко
+изменять интерфейс в будущем.
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+<WHAT>_<WHERE>_<DESCRIPTION>_WORD, где:
+    <WHAT> : Описывает тип используемой строковой константы. Может принимать след значения:
+        TITLE - заголовок, наименование
+        ACTION - описание действия
+        PLACEHOLDER - заполнитель (значение по умолчанию), применяется для указания подсказок в
+            полях ввода текста
+        HINT - подсказка
+        ERROR - ошибка
+        SERVICE - служебные слова или короткие словосочетания пишутся на англ. языке
+        STUB - заглушки для различных ситуаций, НЕ ДОЛЖНЫ ИСПОЛЬЗОВАТЬСЯ В РЕЛИЗЕ
+        DESC - описание контента используется для обеспечения доступности (слабовидящие люди)
+
+    <WHERE> : указывает на место/элемент к которому применяется константа
+        прим.: TITLE_MENU_ITEM_MAIN_WORD -> <WHAT>[TITLE]_<WHERE>[MENU_ITEM]_<DESCRIPTION>[MAIN]_WORD
+
+    <DESCRIPTION> : Применяется для однозначного указания на конкретный элемент или место применения
+        строковой константы
+
+    WORD : используется для более декларативного описания строковых переменных
+
+ @author EvgenySamarin [github](https://github.com/EvgenySamarin)
+ @since 20190909 v1
+-->
+<resources>
+    <string name="TITLE_APP_WORD">Casher</string>
+    <string name="TITLE_MENU_ITEM_MAIN_WORD">Список</string>
+
+
+    <!-- uses for a build layout prototype  -->
+    <string name="STUB_TXT_SHORT_WORD">short text</string>
+    <string name="STUB_DISABLED_WORD">отключено</string>
 </resources>
