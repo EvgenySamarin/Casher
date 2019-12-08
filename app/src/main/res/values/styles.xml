@@ -3,9 +3,9 @@
     <!-- global screen themes -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/light_background_primary</item>
+        <item name="colorPrimaryDark">@color/light_background_primary_d</item>
+        <item name="colorAccent">@color/light_background_accent</item>
     </style>
 
     <style name="SplashTheme" parent="AppTheme">
@@ -14,9 +14,9 @@
 
     <!-- App toolbar theme -->
     <style name="ToolbarThemeLight" parent="ThemeOverlay.AppCompat.ActionBar">
-        <item name="colorPrimary">@color/background_white</item>
-        <item name="android:colorAccent">@color/background_white</item>
-        <item name="android:colorPrimaryDark">@color/background_white</item>
+        <item name="colorPrimary">@color/light_background_primary</item>
+        <item name="android:colorAccent">@color/light_background_accent</item>
+        <item name="android:colorPrimaryDark">@color/light_background_primary_d</item>
     </style>
 
 </resources>
