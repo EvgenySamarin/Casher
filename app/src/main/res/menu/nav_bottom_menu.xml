@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:icon="@drawable/ic_not_interested"
+        android:id="@+id/none1"
+        android:enabled="false"
         android:title="@string/STUB_DISABLED_WORD" />
     <item
+        android:icon="@drawable/ic_view_list"
         android:id="@+id/main_dest"
         android:title="@string/TITLE_MENU_ITEM_MAIN_WORD" />
     <item
+        android:enabled="false"
+        android:icon="@drawable/ic_not_interested"
+        android:id="@+id/none2"
         android:title="@string/STUB_DISABLED_WORD" />
 </menu>

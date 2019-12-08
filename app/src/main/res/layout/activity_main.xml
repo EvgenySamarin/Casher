@@ -7,13 +7,19 @@
     tools:context="com.example.casher.MainActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <include
             android:id="@+id/include"
-            layout="@layout/toolbar" />
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <fragment
             android:id="@+id/nav_host_fragment"
@@ -31,9 +37,14 @@
         android:id="@+id/bottom_nav_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:itemBackground="@color/light_background_primary"
+        app:itemIconTint="@color/selector_light_bottom_nav_item"
+        app:itemTextColor="@color/selector_light_bottom_nav_item"
+        app:itemRippleColor="@color/light_background_primary_l"
+        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/nav_bottom_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

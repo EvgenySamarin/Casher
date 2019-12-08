@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?><!--
+TODO: 20191208 - требует доработки
+
 Ресурсы цветов берутся из системы прототипов к примеру: Figma.
 Цвет в формате #HEX помещается в блок "canonical colors". За основу берутся названия цветов
 с сайта https://www.htmlcsscolor.com, с помощью которых составляются типовые палитры (палитры
@@ -54,6 +56,11 @@ ACCENT - различные типы акцентов и контрастов, �
     <!-- text palette -->
     <color name="light_text_light">@color/white</color>
     <color name="light_text_dark">@color/black</color>
+
+    <!-- icon palette -->
+    <color name="light_icon_on_primary">@color/white</color>
+    <color name="light_icon_on_primary_disabled">@color/light_background_primary_d</color>
+
 
     <!--  canonical colors. Названия цветов взяты с сайта: https://www.htmlcsscolor.com -->
     <color name="white">#ffffff</color>

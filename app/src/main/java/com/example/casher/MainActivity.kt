@@ -11,7 +11,6 @@ import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
 
-/** TODO [2019.12.08] свяжи bottom navigation with android navigation component */
 /**
  * Main screen of program contains base ui logic and navigation
  *
