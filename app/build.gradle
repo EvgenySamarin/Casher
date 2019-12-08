@@ -1,0 +1,83 @@
+plugins {
+    id 'maven-publish'
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.getkeepsafe.dexcount'
+apply plugin: 'androidx.navigation.safeargs'
+
+//MavenPlugin publishing system to set developer info into project
+publishing {
+    publications {
+        maven(MavenPublication) {
+            pom {
+                developers {
+                    developer {
+                        id = 'archi39'
+                        name = 'EvgenySamarin'
+                        email = 'ey.samarin@gmail.com'
+                    }
+                }
+            }
+        }
+    }
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    defaultConfig {
+        applicationId "com.example.casher"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "0.1"
+
+        //add custom param in gradle script to use it into source code
+        buildConfigField("String", "DEVELOPER", '"EvgenySamarin"')
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles fileTree('proguard').asList().toArray()
+        }
+
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    flavorDimensions "test"
+    productFlavors {
+        for_test {
+            dimension "test"
+            applicationIdSuffix ".test"
+            versionNameSuffix "-test"
+        }
+    }
+}
+
+dependencies {
+    //standard gendered elements
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation libraries //connect project libraries
+    implementation librariesBase //connect base android libraries
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt librariesKapt //connect kotlin annotation processing libs
+
+    testImplementation testLibraries
+    androidTestImplementation androidTestLibraries
+}

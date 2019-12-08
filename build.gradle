@@ -1,0 +1,90 @@
+ext {
+    material_version = "1.1.0-beta02" //для красоты в ui
+    legacy_support_v4_version = "1.0.0" //для обратной совместимости
+    architecture_components_version = "2.1.0" //для изучения современного подхода к разработке
+    junit_version = "4.12" //чтобы мозолить себе глаз и заставить наконец выучить тестирование
+    appcompat_version = "1.1.0" //для обратной совместимости с разными версиями android
+    constraint_version = "1.1.3" //для простых набросков layout
+    dagger_version = '2.24' //создания и для предоставления зависимостей
+    timber_version = '4.7.1' //система логирования
+    glide_version = '4.10.0' //glide
+
+    libraries = [
+            //dependency injection
+            "com.google.dagger:dagger:$dagger_version",
+            "com.google.dagger:dagger-android:$dagger_version",
+            "com.google.dagger:dagger-android-support:$dagger_version",
+
+            //design
+            "com.google.android.material:material:$material_version",
+            "androidx.legacy:legacy-support-v4:$legacy_support_v4_version",
+            "androidx.constraintlayout:constraintlayout:$constraint_version",
+
+            //logging
+            "com.jakewharton.timber:timber:$timber_version",
+
+            //utils
+            "com.github.bumptech.glide:glide:$glide_version",
+            "androidx.lifecycle:lifecycle-extensions:$architecture_components_version",
+            "androidx.lifecycle:lifecycle-viewmodel-ktx:$architecture_components_version",
+            "androidx.navigation:navigation-fragment:$architecture_components_version",
+            "androidx.navigation:navigation-ui:$architecture_components_version",
+            "androidx.navigation:navigation-fragment-ktx:$architecture_components_version",
+            "androidx.navigation:navigation-ui-ktx:$architecture_components_version",
+    ]
+
+    librariesBase = [
+            "androidx.appcompat:appcompat:$appcompat_version",
+            "androidx.core:core-ktx:$appcompat_version",
+            "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    ]
+
+    librariesKapt = [
+            "com.google.dagger:dagger-compiler:$dagger_version",
+            "com.google.dagger:dagger-android-processor:$dagger_version",
+    ]
+
+    testLibraries = [
+            "junit:junit:$junit_version",
+    ]
+
+    androidTestLibraries = [
+            //backlog [20190902] не используется, а следовало бы
+            'androidx.test:runner:1.2.0',
+
+            //backlog [20190902] не используется, а следовало бы
+            'androidx.test.espresso:espresso-core:3.2.0'
+    ]
+}
+
+buildscript {
+    ext {
+        kotlin_version = '1.3.61'
+        dexcount_version = '0.8.6'
+        gradle_version = '3.5.2'
+        navigation_safe_args_version = "1.0.0"
+    }
+
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.getkeepsafe.dexcount:dexcount-gradle-plugin:$dexcount_version"
+        classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:$navigation_safe_args_version"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
