@@ -1,4 +1,4 @@
-package com.example.casher.view.ui
+package com.example.casher.view.ui.main
 
 import com.example.casher.R
 import com.example.casher.view.ui.core.BaseActivity

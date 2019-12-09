@@ -32,7 +32,7 @@
                     android:path="/mobile-app" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.casher.view.ui.MainActivity" />
+        <activity android:name="com.example.casher.view.ui.main.MainActivity" />
     </application>
 
 </manifest>

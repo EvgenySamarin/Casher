@@ -1,4 +1,4 @@
-package com.example.casher.view.ui.fragments
+package com.example.casher.view.ui.main.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
 import com.example.casher.R
 import com.example.casher.databinding.FragmentMainBinding
 import com.example.casher.viewmodel.MainViewModel
@@ -19,10 +18,7 @@ import com.example.casher.viewmodel.MainViewModel
  * @since 2019.12.08 v1
  */
 class MainFragment : Fragment() {
-
     lateinit var mainViewModel: MainViewModel
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?

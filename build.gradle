@@ -42,23 +42,23 @@ ext {
             "androidx.navigation:navigation-fragment:$architecture_components_version",
             "androidx.navigation:navigation-ui:$architecture_components_version",
             "androidx.navigation:navigation-fragment-ktx:$architecture_components_version",
-            "androidx.navigation:navigation-ui-ktx:$architecture_components_version",
+            "androidx.navigation:navigation-ui-ktx:$architecture_components_version"
     ]
 
     librariesBase = [
             "androidx.appcompat:appcompat:$appcompat_version",
             "androidx.core:core-ktx:$appcompat_version",
-            "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
-            "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
+            "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     ]
 
     librariesKapt = [
             "com.google.dagger:dagger-compiler:$dagger_version",
             "com.google.dagger:dagger-android-processor:$dagger_version",
+            "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
     ]
 
     testLibraries = [
-            "junit:junit:$junit_version",
+            "junit:junit:$junit_version"
     ]
 
     androidTestLibraries = [
@@ -79,9 +79,8 @@ buildscript {
     }
 
     repositories {
-        google()
         jcenter()
-
+        google()
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$gradle_version"
