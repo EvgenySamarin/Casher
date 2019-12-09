@@ -1,4 +1,4 @@
-package com.example.casher.ui
+package com.example.casher.view.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

@@ -1,7 +1,7 @@
-package com.example.casher.domain
+package com.example.casher.model.entity
 
 /**
- * Description a cash check object
+ * Description a cash check object. Is test POJO object
  *
  * @author EvgenySamarin
  * @since 2019.12.08 v1

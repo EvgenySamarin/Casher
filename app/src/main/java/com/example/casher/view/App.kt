@@ -1,4 +1,4 @@
-package com.example.casher.ui
+package com.example.casher.view
 
 import android.app.Application
 import androidx.annotation.Keep

@@ -61,7 +61,7 @@ buildscript {
     ext {
         kotlin_version = '1.3.61'
         dexcount_version = '0.8.6'
-        gradle_version = '3.5.2'
+        gradle_version = '3.5.3'
         navigation_safe_args_version = "1.0.0"
     }
 

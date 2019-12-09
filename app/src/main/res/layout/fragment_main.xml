@@ -1,23 +1,34 @@
 <layout>
+
     <data>
+
         <variable
-            name="title"
-            type="com.example.casher.domain.CasherItemEntity" />
+            name="view_model"
+            type="com.example.casher.viewmodel.MainViewModel" />
+
+        <variable
+            name="casher_item"
+            type="com.example.casher.model.entity.CasherItemEntity" />
+
+        <variable
+            name="default_text"
+            type="String" />
+
     </data>
 
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.fragments.MainFragment">
+        tools:context=".view.ui.fragments.MainFragment">
 
         <!-- TODO: Update blank fragment layout -->
         <TextView
             android:id="@+id/txt_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/light_text_dark"
-            android:text="@{title.title}" />
+            android:text="@{casher_item.title ?? default_text}"
+            android:textColor="@color/light_text_dark" />
 
     </FrameLayout>
 </layout>
