@@ -47,7 +47,7 @@ android {
         versionName "0.1"
 
         //add custom param in gradle script to use it into source code
-        buildConfigField("String", "SERVER_URL", '"http://localhost/api"')
+        buildConfigField("String", "SERVER_URL", '"http://localhost/api/"')
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

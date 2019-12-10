@@ -5,6 +5,7 @@ import androidx.annotation.Keep
 import com.example.casher.di.AppModule
 import com.example.casher.view.ui.main.MainActivity
 import com.example.casher.view.ui.main.fragments.MainFragment
+import com.example.casher.viewmodel.MainViewModel
 import dagger.Component
 import timber.log.Timber
 import javax.inject.Singleton
@@ -41,4 +42,6 @@ interface AppComponent{
 
     //fragments
     fun inject(fragment: MainFragment)
+
+    fun inject(mainViewModel: MainViewModel)
 }

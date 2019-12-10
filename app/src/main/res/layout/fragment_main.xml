@@ -1,11 +1,6 @@
 <layout>
 
     <data>
-
-        <variable
-            name="view_model"
-            type="com.example.casher.viewmodel.MainViewModel" />
-
         <variable
             name="casher_item"
             type="com.example.casher.model.entity.CasherItemEntity" />

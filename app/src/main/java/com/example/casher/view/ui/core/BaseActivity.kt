@@ -2,6 +2,7 @@ package com.example.casher.view.ui.core
 
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.findNavController
@@ -26,16 +27,19 @@ abstract class BaseActivity : AppCompatActivity() {
     abstract var contentId: Int
 
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private var toolbar: Toolbar? = null
+    private var rootLayout: View? = null
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContentView(contentId)
 
-        val toolbar = window.decorView.findViewById<Toolbar>(R.id.toolbar)
+        toolbar = window.decorView.findViewById(R.id.toolbar)
+        rootLayout = window.decorView.findViewById(R.id.root_layout)
         setSupportActionBar(toolbar)
 
         val host: NavHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
-                as NavHostFragment? ?: return
+                as NavHostFragment
 
         val navController = host.navController
         navController.graph = navController.navInflater.inflate(navGraphId)
@@ -45,6 +49,6 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        return findNavController(R.id.nav_host_fragment).navigateUp(appBarConfiguration)
+        return findNavController(R.id.nav_host_fragment).navigateUp(this.appBarConfiguration)
     }
 }
